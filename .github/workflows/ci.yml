@@ -16,13 +16,10 @@ jobs:
     strategy:
       matrix:
         python:
-          - '3.7'
           - '3.8'
           - '3.9'
         django:
           - '1.11'
-          - '2.0'
-          - '2.1'
           - '2.2'
           - '3.0'
           - '3.1'
@@ -37,18 +34,10 @@ jobs:
           # python 3.8 is django 2.2+
           - python: '3.8'
             django: '1.11'
-          - python: '3.8'
-            django: '2.0'
-          - python: '3.8'
-            django: '2.1'
 
           # python 3.9 is django 2.2+
           - python: '3.9'
             django: '1.11'
-          - python: '3.9'
-            django: '2.0'
-          - python: '3.9'
-            django: '2.1'
 
     name: Run the test suite (Python ${{ matrix.python }}, Django ${{ matrix.django }})
 
